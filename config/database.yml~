@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: summer_db
-  username: <%= ENV['SUMMER_DB_USR'] %>
-  password: <%= ENV['SUMMER_DB_PWD'] %>
+  database: summer_production
+  username: summer
+  password: <%= ENV['SUMMER_DATABASE_PASSWORD'] %>
