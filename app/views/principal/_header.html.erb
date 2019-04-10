@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse main-nav" id="sept-main-nav">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#inicio">Inicio</a></li>
-            <li><a href="#programa">El programa</a></li>
-            <li><a href="#colmex">El Colegio</a></li>
-            <li><a href="#calendario">Calendario</a></li>
-            <li><a href="admision.html">Admisión</a></li>
-            <li><a href="testimonial.html">Testimonial</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="home.html">English</a></li>
+            <li><a href="<%= main_path(anchor: 'programa') %>">El programa</a></li>
+            <li><a href="<%= main_path(anchor: 'colmex') %>">El Colegio</a></li>
+            <li><a href="<%= main_path(anchor: 'calendario') %>">Calendario</a></li>
+            <li><a href="<%= admision_path %>">Admisión</a></li>
+            <li><a href="<%= testimonial_path %>">Testimonial</a></li>
+            <li><a href="<%= contacto_path %>">Contacto</a></li>
+            <li><a href="<%= url_for(locale: params[:locale] == 'es' ? 'en' : 'es') %>">English</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

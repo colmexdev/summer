@@ -12,4 +12,16 @@ class PrincipalController < ApplicationController
   def admision
   end
 
+  def contacto
+  end
+
+  def programa
+  end
+
+  def testimonial
+  end
+
+  def sobre
+  end
+
 end
