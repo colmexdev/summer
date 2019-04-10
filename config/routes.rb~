@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  scope "(:locale)", locale: /(en)|(es)/ do
-    get (locale == "en" ? "calendar" : "calendario") => "principal#calendario", :as => :calendario
+  scope "(:locale)", locale: /(es)/ do
+    get "calendario" => "principal#calendario", :as => :calendario
+  end
+
+  scope ":locale", locale: /(en)/ do
+    get "calendar" => "principal#calendario", :as => :calendar
   end
 
   get "/(:locale)" => "principal#index", :as => :main
