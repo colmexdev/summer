@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /(es)|(en)/ do
     get "calendario" => "principal#calendario", :as => :calendario
+    get "admision" => "principal#admision", :as => :admision
   end
 
   get "/(:locale)", to: "principal#index", as: :main, locale: /(en)|(es)/

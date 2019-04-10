@@ -9,4 +9,7 @@ class PrincipalController < ApplicationController
     end
   end
 
+  def admision
+  end
+
 end
