@@ -1,6 +1,7 @@
 class PrincipalController < ApplicationController
 
   def index
+    @on_main = true
   end
 
   def calendario
