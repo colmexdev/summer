@@ -17,3 +17,4 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require jquery.remotipart
 //= require trix
+//= require backend

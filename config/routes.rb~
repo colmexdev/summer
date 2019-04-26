@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   scope "(:locale)", locale: /(es)|(en)/ do
     get "calendario" => "principal#calendario", :as => :calendario
     get "admision" => "principal#admision", :as => :admision
     get "contacto" => "principal#contacto", :as => :contacto
     get "programa" => "principal#programa", :as => :programa
     get "testimonial" => "principal#testimonial", :as => :testimonial
+    get "sobre" => "principal#sobre", :as => :sobre
   end
 
   get "/(:locale)", to: "principal#index", as: :main, locale: /(en)|(es)/
