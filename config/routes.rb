@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
 
-  devise_for :admins
   scope "(:locale)", locale: /(es)|(en)/ do
     get "calendario" => "principal#calendario", :as => :calendario
     get "admision" => "principal#admision", :as => :admision
