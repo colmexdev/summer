@@ -16,7 +16,7 @@
             <li><a href="<%= admision_path %>">Admisión</a></li>
             <li><a href="<%= testimonial_path %>">Testimonial</a></li>
             <li><a href="<%= contacto_path %>">Contacto</a></li>
-            <li><a href="<%= url_for(overwrite_params: {locale: (params[:locale] == 'es' ? 'en' : 'es')}) %>">English</a></li>
+            <li><a href="<%= url_for(request.params.merge(locale: (params[:locale] == 'es' ? 'en' : 'es'))}) %>">English</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

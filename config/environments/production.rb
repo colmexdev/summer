@@ -63,8 +63,8 @@ Rails.application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
-  #config.i18n.fallbacks = [I18n.default_locale]
-  config.i18n.fallbacks = true
+  config.i18n.fallbacks = [I18n.default_locale]
+  #config.i18n.fallbacks = true
   config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
   config.i18n.default_locale = :es
   config.i18n.available_locales = [:es, :en]

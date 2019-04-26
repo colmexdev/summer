@@ -9,7 +9,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse main-nav" id="sept-main-nav">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#inicio">Inicio</a></li>
+            <li class="active"><a href="#inicio"><%= t('.inicio') %></a></li>
             <li><a href="<%= @on_main ? '#programa' : programa_path %>">El programa</a></li>
             <li><a href="<%= @on_main ? '#colmex' : sobre_path %>">El Colegio</a></li>
             <li><a href="<%= @on_main ? '#calendario' : calendario_path %>">Calendario</a></li>
