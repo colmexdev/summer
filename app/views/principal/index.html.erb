@@ -81,7 +81,7 @@
 								<% end %>
                 </td>
                 <td><%= f.desc_es %></td>
-                <td class="verde"><%= "#{f.fecha_i != f.fecha_f && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '<strong>' : ''}#{f.fecha_i != f.fecha_f ? 'Del ' : ''}#{l f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)}#{f.fecha_i != f.fecha_f ? ' al ' + l(f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)) : ''}#{f.fecha_i != f.fecha_f && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '</strong>' : ''}".html_safe %></td>
+                <td class="<%= f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '' : 'verde' %>"><%= "#{f.fecha_i - f.fecha_f != 0 && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '<strong>' : ''}#{f.fecha_i - f.fecha_f != 0 ? 'Del ' : ''}#{l f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)}#{f.fecha_i - f.fecha_f != 0 ? ' al ' + l(f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)) : ''}#{f.fecha_i - f.fecha_f != 0 && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '</strong>' : ''}".html_safe %></td>
               </tr>
 <% end %>
 
