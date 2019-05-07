@@ -81,7 +81,7 @@ class PanelController < ApplicationController
 
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
-	  @sets[params[:set].to_sym][:trix].each do |t|
+	  @trix.each do |t|
       @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<!-- block -->/,""))
     end
     respond_to do |format|
@@ -118,7 +118,7 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-			@sets[params[:set].to_sym][:trix].each do |t|
+			@trix.each do |t|
         @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<!-- block -->/,""))
       end
     elsif params[:set] == "Contenido de sitios"

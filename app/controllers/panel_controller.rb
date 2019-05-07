@@ -142,7 +142,7 @@ class PanelController < ApplicationController
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     if params[:set] != "Contenido de sitios"
-      @sets[params[:set].to_sym][:trix].each do |t|
+      @trix.each do |t|
         obj_params[t] = obj_params[t].gsub(/<!-- block -->/,"")
       end
     end
