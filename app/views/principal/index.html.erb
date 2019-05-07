@@ -81,7 +81,7 @@
 								<% end %>
                 </td>
                 <td><%= f.desc_es %></td>
-                <td class="verde"><%= f.fecha_i %></td>
+                <td class="verde"><%= l f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year) %></td>
               </tr>
 <% end %>
 
