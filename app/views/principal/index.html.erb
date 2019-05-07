@@ -73,6 +73,19 @@
           </div>
           <table class="table table-striped table-bordered resaltado">
             <tbody>
+<% @fechas.each do |f| %>
+              <tr style="<%= f.fecha_i <= Date.current && f.fecha_f >= Date.current ? 'background-color: #7c334e; color: #fff;' : '' %>">
+                <td style="text-align: center" class="verde">
+								<% if f.fecha_f < Date.current %>
+                  <i class="fa fa-check"></i>
+								<% end %>
+                </td>
+                <td><%= f.desc_es %></td>
+                <td class="verde"><%= f.fecha_i %></td>
+              </tr>
+<% end %>
+
+<% if false %>
               <tr>
                 <td style="text-align: center" class="verde">
                   <!--i class="fa fa-check"></i-->
@@ -164,6 +177,7 @@
                 <td>Ceremonia de clausura y despedida</td>
                 <td class="verde">2 de agosto</td>
               </tr>
+<% end %>
             </tbody>
           </table>
         </div>
