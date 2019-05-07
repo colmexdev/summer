@@ -6,7 +6,3 @@ $("#glyph-home").css({"display": "inline-block"}).unbind().on("click",function(e
 $("#glyph-edit").css({"display": "none"}).unbind();
 
 $("#graphs-gest").html("<%= j render 'panel/generar' %>");
-
-$(document).ready(function(){
-	styleDatepickers();
-});

@@ -59,6 +59,12 @@
   </div>
 <% end %>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	styleDatepickers();
+});
+</script>
+
 <% if false %>
 	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
 <% end %>
