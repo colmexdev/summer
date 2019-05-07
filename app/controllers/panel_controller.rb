@@ -266,6 +266,12 @@ class PanelController < ApplicationController
 
   def select_set
     @sets = {
+      "Cronograma": {
+        model: Fecha,
+        fields: {desc_es: "Descripción (español)", desc_en: "Descripción (inglés)", fecha_i: "Fecha inicial", fecha_f: "Fecha final"},
+        dates: [:fecha_i, :fecha_f],
+        p_text: [:desc_es, :desc_en]
+      }
 #      "Personal administrativo": {
 #        model: Personal,
 #        fields: {nombre: "Nombre", extension: "Extensión", correo: "Correo electrónico", area: "Área de trabajo", servicio: "Servicios"},
@@ -331,15 +337,15 @@ class PanelController < ApplicationController
   end
 
   def get_object_fields
-    @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][0] )
-    @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
+    @fields = @sets[params[:set].to_sym][:fields] || {}
+    @imgs = @sets[params[:set].to_sym][:imgs] || {}
     @models = @sets[params[:set].to_sym][:model]
-    @dates = @sets[params[:set].to_sym][:dates]
-    @trix = @sets[params[:set].to_sym][:trix]
-    @numbers = @sets[params[:set].to_sym][:numbers]
-    @plains = @sets[params[:set].to_sym][:p_text]
-    @textareas = @sets[params[:set].to_sym][:textarea]
-    @selects = @sets[params[:set].to_sym][:select]
+    @dates = @sets[params[:set].to_sym][:dates] || []
+    @trix = @sets[params[:set].to_sym][:trix] || []
+    @numbers = @sets[params[:set].to_sym][:numbers] || []
+    @plains = @sets[params[:set].to_sym][:p_text] || []
+    @textareas = @sets[params[:set].to_sym][:textarea] || []
+    @selects = @sets[params[:set].to_sym][:select] || {}
     @presence = @models.validators.collect{|v| v if v.class == ActiveRecord::Validations::PresenceValidator }.compact.collect(&:attributes).flatten || []
   end
 

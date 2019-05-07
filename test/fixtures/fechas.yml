@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desc_es: MyText
+  desc_en: MyText
+  fecha_i: 2019-05-07
+  fecha_f: 2019-05-07
+
+two:
+  desc_es: MyText
+  desc_en: MyText
+  fecha_i: 2019-05-07
+  fecha_f: 2019-05-07

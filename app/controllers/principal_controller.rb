@@ -2,6 +2,9 @@ class PrincipalController < ApplicationController
 
   def index
     @on_main = true
+    respond_to do |format|
+      format.html {render (params[:locale] == "en" ? "home" : "index")}
+    end
   end
 
   def calendario
