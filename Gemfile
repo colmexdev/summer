@@ -41,7 +41,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'active_directory'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
-gem 'trix'
+gem 'trix-rails', require: 'trix'
 gem 'remotipart', '~> 1.2'
 gem 'bootstrap-datepicker-rails'
 gem 'httparty'
