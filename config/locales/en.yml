@@ -36,3 +36,8 @@ en:
       calendario: "Calendar 2019"
       inicial: "From "
       rango: " to "
+    contacto:
+      informacion: "For more information"
+      contactanos: "Contact us:"
+      telefono: "Phone number"
+      correo: "E-mail"

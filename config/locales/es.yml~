@@ -62,3 +62,8 @@ es:
       calendario: "Calendario 2019"
       inicial: "Del "
       rango: " al "
+    calendario:
+      fecha: "Aparta la fecha"
+      calendario: "Calendario 2019"
+      inicial: "Del "
+      rango: " al "

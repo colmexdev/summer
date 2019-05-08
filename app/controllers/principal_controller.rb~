@@ -6,9 +6,7 @@ class PrincipalController < ApplicationController
   end
 
   def calendario
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "calendar" : "calendario")}
-    end
+    @fechas = Fecha.order(fecha_i: :asc, fecha_f: :asc)
   end
 
   def admision

@@ -5,18 +5,20 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title st-center">
-            <h3>Para mayor información</h3>
-            <p>contacta a:</p>
+            <h3><%= t('.informacion') %></h3>
+            <p><%= t('.contactanos') %></p>
+<% @responsable.each do |r| %>
             <br>
             <address>
-          <strong>Ximena Barri Rosendo</strong><br>
-          <em>Coordinadora del Programa Internacional de Verano</em><br>
+          <strong><%= r.nombre %></strong><br>
+          <em><%= I18n.locale == :es ? r.cargo : r.cargo_en %></em><br>
           Camino al Ajusco 20, C.P. 10740,<br>
           Colonia Pedregal de Santa Teresa<br>
           Ciudad de México, México<br>
-          Teléfono: +52 55 54493000 Ext: 3248<br>
-          Correo electrónico: <a href="mailto:summerprogram@colmex.mx">summerprogram@colmex.mx</a>
+          <%= t('.telefono') %>: +52 55 54493000 Ext: <%= r.extension %><br>
+          <%= t('.mail') %>: <a href="mailto:summerprogram@colmex.mx">summerprogram@colmex.mx</a>
           </address>
+<% end %>
           </div>
         </div>
       </div>
