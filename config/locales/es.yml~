@@ -47,6 +47,16 @@ es:
     footer:
       copyright: "Derechos reservados, El Colegio de México A.C. © %{year}."
     index:
+      folleto: "Descarga el folleto"
+      conoce: "Conócelo"
+      aqui: "Aquí"
+      sobre: "Sobre el"
+      curso: "Programa Internacional de Verano"
+      desc_curso_html: <p>El Programa Internacional de Verano nace con el propósito de fortalecer los vínculos globales de El Colegio de México, en particular sus convenios de movilidad académica, y contribuir al posicionamiento de los estudios de México y América Latina en el mundo.</p><p>El Programa se impartirá en inglés y ofrecerá cursos dedicados a analizar la realidad mexicana y latinoamericana desde los diferentes campos de investigación de los centros de estudio de El Colegio. Además, los asistentes tomarán clases de español y podrán disfrutar de visitas culturales planeadas como parte del Programa.</p>
+      mas_info: "Más información"
+      colegio: "El Colegio de México"
+      desc_colmex: "El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades. Es una de las más destacadas en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos desde su fundación en 1940 hasta el presente."
+      info: "Más información"
       fecha: "Aparta la fecha"
       calendario: "Calendario 2019"
       inicial: "Del "
