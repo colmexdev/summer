@@ -274,7 +274,7 @@ class PanelController < ApplicationController
       }, "Responsable": {
         model: Responsable,
         fields: {nombre: "Nombre", cargo: "Cargo (español)", cargo_en: "Cargo (inglés)", extension: "Extensión"},
-        p_text: [:nombre, :cargo, :extension]
+        p_text: [:nombre, :cargo, :cargo_en, :extension]
       }
 #      "Personal administrativo": {
 #        model: Personal,
