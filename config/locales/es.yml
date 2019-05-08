@@ -46,4 +46,11 @@ es:
       idioma: "English"
     footer:
       copyright: "Derechos reservados, El Colegio de México A.C. © %{year}."
-      
+    index:
+      colegio: "El Colegio de México"
+      desc_colmex: "El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades. Es una de las más destacadas en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos desde su fundación en 1940 hasta el presente."
+      info: "Más información"
+      fecha: "Aparta la fecha"
+      calendario: "Calendario 2019"
+      inicial: "Del "
+      rango: " al "

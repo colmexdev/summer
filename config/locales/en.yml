@@ -15,3 +15,11 @@ en:
       idioma: "Español"
     footer:
       copyright: "All rights reserved, El Colegio de México A.C. © %{year}."
+    index:
+      colegio: "El Colegio de México"
+      desc_colmex: "Founded in 1940, El Colegio de México is widely recognized as a leading public academic institution in the Hispanic world, specializing in research and higher education in the Social Sciences and Humanities."
+      info: "An overview"
+      fecha: "Save the date"
+      calendario: "Calendar 2019"
+      inicial: "From "
+      rango: " to "

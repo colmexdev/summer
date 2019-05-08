@@ -44,4 +44,10 @@ es:
       testimonial: "Testimonial"
       contacto: "Contacto"
       idioma: "English"
-      
+    footer:
+      copyright: "Derechos reservados, El Colegio de México A.C. © %{year}."
+    index:
+      fecha: "Aparta la fecha"
+      calendario: "Calendario 2019"
+      inicial: "Del "
+      rango: " al "
