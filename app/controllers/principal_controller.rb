@@ -26,15 +26,9 @@ class PrincipalController < ApplicationController
   end
 
   def testimonial
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "testimonials" : "testimonial")}
-    end
   end
 
   def sobre
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "overview" : "sobre")}
-    end
   end
 
 end

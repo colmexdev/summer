@@ -16,9 +16,7 @@ class PrincipalController < ApplicationController
   end
 
   def contacto
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "contact" : "contacto")}
-    end
+    @responsable = Responsable.all
   end
 
   def programa
@@ -34,9 +32,6 @@ class PrincipalController < ApplicationController
   end
 
   def sobre
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "overview" : "sobre")}
-    end
   end
 
 end

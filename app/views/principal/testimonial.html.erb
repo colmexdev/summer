@@ -6,11 +6,11 @@
         <div class="col-md-12">
           <!-- <h2 class="tac">frequently asked questions</h2> -->
           <div class="section-title st-center">
-            <p style="margin-bottom: 10px; line-height: 48px; margin-top: 20px;">Testimonial</p>
+            <p style="margin-bottom: 10px; line-height: 48px; margin-top: 20px;"><%= t('.testimonial') %></p>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="videos">
         <div class="col-md-6">
           <div class="faq">
             <h2 class="text-center">Verano 2017</h2>
@@ -34,5 +34,29 @@
       </div>
     </div>
   </section>
+
+<script>
+$(document).ready(function(){
+	$.ajax({
+		url: 'https://coed.colmex.mx/catalogo_videos.json?tags=summer program&crono=desc",
+		success: function(result){
+			vids_html = ""
+			result["vids"].forEach(function(vid){
+				vids_html = vids_html + '<div class="col-md-6">' +
+								  '<div class="faq">' +
+								    '<h2 class="text-center"><%= I18n.locale == :es ? "Verano " : "Summer " %>' + vid["fecha"].substr(0,4) + '</h2>' +
+								    '<div class="cajavideo">' +
+								      '<div class="embed-container">' +
+								        '<iframe src="https://www.youtube.com/embed/' + vid["v_id"] + '" allowfullscreen></iframe>' +
+								      '</div>' +
+								    '</div>' +
+								  '</div>' +
+								'</div>';
+				document.querySelector("#videos").innerHTML = vids_html;
+			});
+		}
+	});
+});
+</script>
 
 <%= render 'principal/footer' %>
