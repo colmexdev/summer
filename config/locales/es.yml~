@@ -67,3 +67,8 @@ es:
       calendario: "Calendario 2019"
       inicial: "Del "
       rango: " al "
+    contacto:
+      informacion: "Para más información"
+      contactanos: "Contacta a:"
+      telefono: "Teléfono"
+      correo: "Correo electrónico"
