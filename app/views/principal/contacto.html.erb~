@@ -5,9 +5,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title st-center">
-            <h3>Para mayor información</h3>
-            <p>contacta a:</p>
-<% @responsableeach do |r| %>
+            <h3><%= t('.informacion') %></h3>
+            <p><%= t('.contactanos') %></p>
+<% @responsable.each do |r| %>
             <br>
             <address>
           <strong><%= r.nombre %></strong><br>
