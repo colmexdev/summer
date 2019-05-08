@@ -16,6 +16,9 @@ en:
     footer:
       copyright: "All rights reserved, El Colegio de México A.C. © %{year}."
     index:
+      conoce: "Find out more"
+      folleto: "Download the brochure"
+      aqui: "Here"
       sobre: "About the"
       curso: "International Summer Program"
       desc_curso_html: <p>The International Summer Program was created to enhance exchange agreements between El Colegio de México and various worldwide universities, and to help raise the profile of Latin American and Mexican Studies around the world.</p><p>The Program is taught in English and its curriculum focuses on the study of Mexican and Latin American realities as approached by the faculty at El Colegio de México. Additionally, students on the program will attend Spanish language classes and cultural tours around the Mexico City area.</p>

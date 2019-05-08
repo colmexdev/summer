@@ -16,6 +16,7 @@ en:
     footer:
       copyright: "All rights reserved, El Colegio de México A.C. © %{year}."
     index:
+      inicio: "International Summer Program"
       conoce: "Find out more"
       folleto: "Download the brochure"
       aqui: "Here"

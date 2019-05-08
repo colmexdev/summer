@@ -47,8 +47,8 @@ es:
     footer:
       copyright: "Derechos reservados, El Colegio de México A.C. © %{year}."
     index:
-      folleto: "Descarga el folleto"
       conoce: "Conócelo"
+      folleto: "Descarga el folleto"
       aqui: "Aquí"
       sobre: "Sobre el"
       curso: "Programa Internacional de Verano"
