@@ -34,4 +34,16 @@ es:
       no_year: '%e de %B'
       with_year: '%e de %B de %Y'
       only_day: '%e'
+  principal:
+    header:
+      inicio: "Inicio"
+      programa: "El programa"
+      colegio: "El Colegio"
+      calendario: "Calendario"
+      admision: "Admisión"
+      testimonial: "Testimonial"
+      contacto: "Contacto"
+      idioma: "English"
+    footer:
+      copyright: "Derechos reservados, El Colegio de México A.C. © %{year}."
       

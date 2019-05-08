@@ -2,6 +2,7 @@ class PrincipalController < ApplicationController
 
   def index
     @on_main = true
+    @fechas = Fecha.order(fecha_i: :asc, fecha_f: :asc)
     respond_to do |format|
       format.html {render (params[:locale] == "en" ? "home" : "index")}
     end

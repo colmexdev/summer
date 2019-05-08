@@ -1,2 +1,15 @@
 en:
-  hello: "Hello world"
+  date:
+    formats:
+      no_year: '%B %e'
+      with_year: '%B %e %Y'
+  principal:
+    header:
+      inicio: "Home"
+      programa: "Program"
+      colegio: "El Colegio"
+      calendario: "Calendar"
+      admision: "Admission"
+      testimonial: "Testimonial"
+      contacto: "Contact"
+      idioma: "Español"
