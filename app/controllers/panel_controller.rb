@@ -271,6 +271,10 @@ class PanelController < ApplicationController
         fields: {desc_es: "Descripción (español)", desc_en: "Descripción (inglés)", fecha_i: "Fecha inicial", fecha_f: "Fecha final"},
         dates: [:fecha_i, :fecha_f],
         p_text: [:desc_es, :desc_en]
+      }, "Responsable": {
+        model: Responsable,
+        fields: {nombre: "Nombre", cargo: "Cargo", extension: "Extensión"}
+        p_text: [:nombre, :cargo, :extension]
       }
 #      "Personal administrativo": {
 #        model: Personal,
