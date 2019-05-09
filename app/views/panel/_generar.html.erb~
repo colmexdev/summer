@@ -26,6 +26,11 @@
 			<%= f.text_area k, required: (@presence.include?(k) ? "required" : false) %>
 		<% elsif @selects.key?(k) %>
 			<%= f.select(k, @selects[k], selected: (@obj.public_send(k) || @selects[k][0][0]), required: (@presence.include?(k) ? "required" : false) ) %>
+		<% elsif @checks.include?(k) %>
+			<% @checks[k].keys.each do |t| %>
+		  	<%= f.check_box k, {multiple: true}, t, nil %>
+				<%= f.label k, t %><br>
+			<% end %>
 		<% elsif @numbers.include?(k) %>
 			<%= f.number_field k, min: 1, step: 1, value: (@obj.public_send(k) || 1), required: (@presence.include?(k) ? "required" : false) %>
 		<% end %>
