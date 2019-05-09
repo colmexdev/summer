@@ -277,8 +277,9 @@ class PanelController < ApplicationController
         p_text: [:nombre, :cargo, :cargo_en, :extension]
       }, "Categoría de cursos": {
         model: CategoriaCurso,
-        fields: {categoria: "Categoría (español)", categoria_en: "Categoría (inglés)"},
-        p_text: [:categoria, :categoria_en]
+        fields: {categoria: "Categoría (español)", categoria_en: "Categoría (inglés)", index: "Índice de aparición"},
+        p_text: [:categoria, :categoria_en],
+        numbers: [:index]
       }, "Profesores de cursos": {
         model: Profesor,
         fields: {nombre: "Nombre", sitio: "Sitio web"},
