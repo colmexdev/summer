@@ -282,7 +282,7 @@ class PanelController < ApplicationController
       }, "Profesores de cursos": {
         model: Profesor,
         fields: {nombre: "Nombre", sitio: "Sitio web"},
-        p_text: [:nombre, :sitio}
+        p_text: [:nombre, :sitio]
       }, "Cursos": {
         model: Tema,
         fields: {tema: "Título (español)", tema_en: "Título (inglés)", categoria: "Categoría", profesor: "Profesor(es)"},

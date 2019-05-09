@@ -381,7 +381,7 @@ class PanelController < ApplicationController
   end
 
   def obj_params
-    campos = @fields.keys + @imgs.keys + @imgs.keys.map{|k| (k.to_s + "_del").to_sym} + @checks.key.map{|k| [k,[]]}.to_h
+    campos = @fields.keys + @imgs.keys + @imgs.keys.map{|k| (k.to_s + "_del").to_sym} + @checks.keys.map{|k| [k,[]]}.to_h
     params.require(@models.to_s.downcase.to_sym).permit(campos)
   end
 end
