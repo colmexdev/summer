@@ -274,7 +274,21 @@ class PanelController < ApplicationController
       }, "Responsable": {
         model: Responsable,
         fields: {nombre: "Nombre", cargo: "Cargo (español)", cargo_en: "Cargo (inglés)", extension: "Extensión"},
-        p_text: [:nombre, :cargo, :extension]
+        p_text: [:nombre, :cargo, :cargo_en, :extension]
+      }, "Categoría de cursos": {
+        model: CategoriaCurso,
+        fields: {categoria: "Categoría (español)", categoria_en: "Categoría (inglés)"},
+        p_text: [:categoria, :categoria_en]
+      }, "Profesores de cursos": {
+        model: Profesor,
+        fields: {nombre: "Nombre", sitio: "Sitio web"},
+        p_text: [:nombre, :sitio}
+      }, "Cursos": {
+        model: Tema,
+        fields: {tema: "Título (español)", tema_en: "Título (inglés)", categoria: "Categoría", profesor: "Profesor(es)"},
+        p_text: [:tema, :tema_en],
+        select: {categoria: CategoriaCurso.all.map{|x| [x.categoria, x.categoria]}},
+        check: {profesor: Profesor.all.map{|x| [x.nombre, x.nombre]}}
       }
 #      "Personal administrativo": {
 #        model: Personal,
@@ -350,6 +364,7 @@ class PanelController < ApplicationController
     @plains = @sets[params[:set].to_sym][:p_text] || []
     @textareas = @sets[params[:set].to_sym][:textarea] || []
     @selects = @sets[params[:set].to_sym][:select] || {}
+    @checks = @sets[params[:set].to_sym][:checks] || {}
     @presence = @models.validators.collect{|v| v if v.class == ActiveRecord::Validations::PresenceValidator }.compact.collect(&:attributes).flatten || []
   end
 
@@ -366,7 +381,7 @@ class PanelController < ApplicationController
   end
 
   def obj_params
-    campos = @fields.keys + @imgs.keys + @imgs.keys.map {|k| (k.to_s + "_del").to_sym}
+    campos = @fields.keys + @imgs.keys + @imgs.keys.map{|k| (k.to_s + "_del").to_sym} + @checks.key.map{|k| [k,[]]}.to_h
     params.require(@models.to_s.downcase.to_sym).permit(campos)
   end
 end

@@ -7,21 +7,24 @@
           <div class="section-title st-center">
             <h3><%= t('.sobre') %></h3>
             <p><%= t('.programa') %></p>
+<% if I18n.locale == :es %>
             <h4><%= t('.para').upcase %></h4>
+<% end %>
           </div>
           <div class="blog-post">
             <h2 class="post-title"><a href="#"><%= t('.descripcion') %></a></h2>
             <div class="post-content">
               <p>
 								<%= t('.desc_html') %>
-<a href="#" id="materias"></a>
+								<a href="#" id="materias"></a>
               </p>
-              
             </div>
           </div>
           <div class="blog-post">
-            <h2 class="post-title"><a href="#">Cursos y planta docente</a></h2>
-            <p>Los cursos del Programa Internacional de verano 2019* serán:</p>
+            <h2 class="post-title"><a href="#"><%= t('.cursos') %></a></h2>
+<% if I18n.locale == :es %>
+            <p><%= t('.cursos_desc') %></p>
+<% end %>
             <div class="post-content">
               <table class="table table-striped">
                 <tbody>
@@ -100,40 +103,31 @@
                 </tbody>
               </table>	
 							<a href="#" id="cultura"></a>
-              <p><strong>*Mexicanos y extranjeros residentes en México pueden inscribirse, favor de solicitar informes con la Coordinación del Programa.</strong></p>
+<% if I18n.locale == :es %>
+              <p><strong><%= t('.nota_curso') %></strong></p>
+<% end %>
             </div>
           </div>
           <div class="blog-post">
-            <h2 class="post-title"><a href="#">Cultura latinoamericana y lengua española</a></h2>
-            <div class="post-content">
-              <p>A la par de las materias teóricas del Programa, se ofrecerá a los asistentes, según su nivel, un curso de español como lengua extranjera. Sujeto a demanda, se ofrecerán los siguientes niveles: </p>
-              <h3>Elemental (A1)</h3>
-              <p>Para estudiantes que no conocen el idioma. Los asistentes adquirirán las competencias necesarias para comprender y utilizar expresiones cotidianas frecuentes en el mundo hispánico e interactuar de manera elemental con los hispanoparlantes.</p>
-              <h3>Básico (A2)</h3>
-              <p>Para estudiantes con conocimientos previos del idioma. Los asistentes adquirirán las competencias necesarias para comprender frases y expresiones cotidianas relacionadas con su entorno inmediato.</p>
-              <h3>Intermedio (B1)<a href="#" id="certificados"></a></h3>
-              <p>Para estudiantes que hayan tomado por lo menos 150 horas/clases de español como lengua extranjera. Los asistentes adquirirán las competencias para comprender de manera clara la mayoría de las situaciones cotidianas donde haya intercambio
-                de información y a expresarse de forma simple sobre sus temas de interés y experiencias.</p>
-            </div>
+            <h2 class="post-title"><a href="#"><%= t('.cultura') %></a></h2>
+            <%= t('.cultura_html') %>
           </div>
           <div class="blog-post">
-            <h2 class="post-title"><a href="#">Certificados</a></h2>
+            <h2 class="post-title"><a href="#"><%= t('.certificados') %></a></h2>
             <div class="post-content">
-              <p>Los alumnos que se inscriban al programa recibirán un certificado de asistencia y una boleta de calificaciones en donde se establecen las materias (éstas aparecerán listadas sólo si fueron aprobadas bajo un criterio de calificación mínima
-                aprobatoria de 8/10) y el total de horas cursadas. El Colegio de México emitirá este certificado, pero en ningún momento se hará responsable por la revalidación, o no, de esas materias ante su institución, ya que esto es competencia exclusiva
-                del alumno.</p>
+              <%= t('.cert_desc_html') %>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="widgets" style="position: fixed">
             <div class="widget">
-              <h2 class="widget-title">Contenidos</h2>
+              <h2 class="widget-title"><%= t('.contenidos') %></h2>
               <ul>
-                <li><a href="#descripcion">Descripción</a></li>
-                <li><a href="#materias">Cursos y planta docente</a></li>
-                <li><a href="#cultura">Cultura latinoamericana y lengua española</a></li>
-                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#descripcion"><%= t('.descripcion') %></a></li>
+                <li><a href="#materias"><%= t('.cursos') %></a></li>
+                <li><a href="#cultura"><%= t('.cultura') %></a></li>
+                <li><a href="#certificados"><%= t('.certificados') %></a></li>
                 <!--li><a href="images/schedule-international-summer-program.pdf" target="_blank">Horarios de los cursos</a></li-->
               </ul>
             </div>

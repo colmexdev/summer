@@ -1,0 +1,13 @@
+class CategoriaCurso < ApplicationRecord
+  before_destroy :delete_temas
+
+  validates_presence_of :categoria
+  validates_presence_of :categoria_en
+
+  protected
+
+  def delete_temas
+    Tema.where("categoria = ?", self.categoria).destroy_all
+  end
+
+end
