@@ -20,9 +20,7 @@ class PrincipalController < ApplicationController
   end
 
   def programa
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "program" : "programa")}
-    end
+
   end
 
   def testimonial
