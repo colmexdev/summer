@@ -364,7 +364,7 @@ class PanelController < ApplicationController
     @plains = @sets[params[:set].to_sym][:p_text] || []
     @textareas = @sets[params[:set].to_sym][:textarea] || []
     @selects = @sets[params[:set].to_sym][:select] || {}
-    @checks = @sets[params[:set].to_sym][:checks] || {}
+    @checks = @sets[params[:set].to_sym][:check] || {}
     @presence = @models.validators.collect{|v| v if v.class == ActiveRecord::Validations::PresenceValidator }.compact.collect(&:attributes).flatten || []
   end
 
