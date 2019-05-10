@@ -21,7 +21,6 @@ class PrincipalController < ApplicationController
 
   def programa
     @categorias = CategoriaCurso.order(index: :asc)
-    @profesores = Profesor.all
     @cursos = Tema.all
   end
 

@@ -37,8 +37,9 @@
                   <tr>
                     <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema : s.tema_en %></a></td>
                     <td>
-<% s.profesor[1..-2].gsub("\",\"","----").gsub("\"","").split("----").each_with_index do |p,i| %>
-											<%= s.profesor.size > 1 && i > 0 ? (i == s.profesor.size - 1 ? " y " : ", ") : '' %><a href="<%= @profesores.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
+<% @profs = s.profesor[1..-2].gsub("\",\"","----").gsub("\"","").split("----") %>
+<% @profs.each_with_index do |p,i| %>
+											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= @profesores.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
 <% end %>
 										</td>
                   </tr>

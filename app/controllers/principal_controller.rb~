@@ -20,7 +20,9 @@ class PrincipalController < ApplicationController
   end
 
   def programa
-
+    @categorias = CategoriaCurso.order(index: :asc)
+    @profesores = Profesor.all
+    @cursos = Tema.all
   end
 
   def testimonial
