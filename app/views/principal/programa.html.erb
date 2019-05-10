@@ -35,7 +35,7 @@
                   </tr>
 <% @cursos.where(categoria: c.categoria).each do |s| %>
                   <tr>
-                    <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema : s.tema_en %></a></td>
+                    <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema.html_safe : s.tema_en.html_safe %></a></td>
                     <td>
 <% @profs = s.profesor[1..-2].split(",").map{|x| x.gsub(/ *?" *?/,"")} %>
 <% logger.debug @profs.class.to_s %>
