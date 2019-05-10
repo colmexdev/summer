@@ -37,10 +37,10 @@
                   <tr>
                     <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema : s.tema_en %></a></td>
                     <td>
-<% @profs = s.profesor[1..-2].split(",").map{|x| x.gsub("\"","")} %>
+<% @profs = s.profesor[1..-2].split(",").map{|x| x.gsub(/ *?" *?/,"")} %>
 <% logger.debug @profs.class.to_s %>
 <% @profs.each_with_index do |p,i| %>
-											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= Profesor.where("nombre = ?", p).first.sitio %>" target="_blank"><%= p %></a>
+											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= Profesor.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
 <% end %>
 										</td>
                   </tr>
