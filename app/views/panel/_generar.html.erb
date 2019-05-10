@@ -28,7 +28,7 @@
 			<%= f.select(k, @selects[k], selected: (@obj.public_send(k) || @selects[k][0][0]), required: (@presence.include?(k) ? "required" : false) ) %>
 		<% elsif @checks.include?(k) %>
 			<% @checks[k].each do |t,v| %>
-		  	<%= f.check_box k, {multiple: true, checked: @obj.public_send(k).include?(v)}, v, nil %>
+		  	<%= f.check_box k, {multiple: true, checked: @obj.public_send(k) && @obj.public_send(k).include?(v)}, v, nil %>
 				<%= f.label k, t %><br>
 			<% end %>
 		<% elsif @numbers.include?(k) %>
