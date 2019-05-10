@@ -39,7 +39,7 @@
                     <td>
 <% @profs = s.profesor[1..-2].gsub("\",\"","----").gsub("\"","").split("----") %>
 <% @profs.each_with_index do |p,i| %>
-											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= Profesor.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
+											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= Profesor.where("nombre = ?" p).first.sitio %>" target="_blank"><%= p %></a>
 <% end %>
 										</td>
                   </tr>
