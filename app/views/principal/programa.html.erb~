@@ -23,7 +23,7 @@
           <div class="blog-post">
             <h2 class="post-title"><a href="#"><%= t('.cursos') %></a></h2>
 <% if I18n.locale == :es %>
-            <p><%= t('.cursos_desc') %></p>
+            <p><%= t('.cursos_desc', year: Date.current.year) %></p>
 <% end %>
             <div class="post-content">
               <table class="table table-striped">

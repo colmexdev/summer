@@ -28,14 +28,23 @@
             <div class="post-content">
               <table class="table table-striped">
                 <tbody>
+<% @categorias.each do |c| %>
                   <tr>
                     <th colspan="2" style="text-align: center">
-                      <h2>Lingüística</h2></th>
+                      <h2><%= I18n.locale == :es ? c.categoria : c.categoria_en %></h2></th>
                   </tr>
+<% @cursos.where(categoria: c.categoria).each do |s| %>
                   <tr>
-                    <td><a href="images/Fundamentals_of_theoretical_and_applied_terminology.pdf" target="_blank">Fundamentals of theoretical and applied terminology</a></td>
-                    <td><a href="https://cell.colmex.mx/index.php/maria-pozzi" target="_blank">María Pozzi</a></td>
+                    <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema : s.tema_en %></a></td>
+                    <td>
+<% s.profesor.each_with_index do |p,i| %>
+											<%= s.profesor.size > 1 && i > 0 ? (i == s.profesor.size - 1 ? " y " : ", ") : '' %><a href="<%= @profesores.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
+<% end %>
+										</td>
                   </tr>
+<% end %>
+<% end %>
+<% if false %>
                   <tr>
                     <td><a href="images/Introduction-to-the-Dictionary-of-Mexican-Spanish.pdf" target="_blank">Introduction to the <em>Dictionary of Mexican Spanish</em></a></td>
                     <td><a href="http://cell.colmex.mx/index.php/alfonso-medina" target="_blank">Alfonso Medina Urrea</a></td>
@@ -100,6 +109,7 @@
                     <td><a href="images/Development_Inequality_Poverty.pdf" target="_blank">Development (D), Inequality (I) and Poverty (P). Towards a transdisciplinary unification of D, I and P concepts and measuring methods</a></td>
                     <td><a href="https://ces.colmex.mx/123" target="_blank">Julio Boltvinik</a></td>
                   </tr>
+<% end %>
                 </tbody>
               </table>	
 							<a href="#" id="cultura"></a>
