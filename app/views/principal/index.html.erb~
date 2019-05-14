@@ -77,7 +77,7 @@
                   <i class="fa fa-check"></i>
 								<% end %>
                 </td>
-                <td><%= I18n.locale == 'es' ? f.desc_es : f.desc_en %></td>
+                <td><%= I18n.locale == :es ? f.desc_es : f.desc_en %></td>
                 <td class="<%= f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '' : 'verde' %>"><%= "#{f.fecha_i != f.fecha_f && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '<strong>' : ''}#{f.fecha_i != f.fecha_f ? t('.inicial') : ''}#{l f.fecha_i, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)}#{f.fecha_i != f.fecha_f ? t('.rango') + l(f.fecha_f, format: (f.fecha_i.year == Date.current.year ? :no_year : :with_year)) : ''}#{f.fecha_i != f.fecha_f && f.fecha_i <= Date.current && f.fecha_f >= Date.current ? '</strong>' : ''}".html_safe %></td>
               </tr>
 <% end %>
