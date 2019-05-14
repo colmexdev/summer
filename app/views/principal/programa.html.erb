@@ -38,79 +38,12 @@
                     <td><a href="<%= s.documento.url %>" target="_blank"><%= I18n.locale == :es ? s.tema.html_safe : s.tema_en.html_safe %></a></td>
                     <td>
 <% @profs = s.profesor[1..-2].split(",").map{|x| x.gsub(/ *?" *?/,"")} %>
-<% logger.debug @profs.class.to_s %>
 <% @profs.each_with_index do |p,i| %>
 											<%= @profs.size > 1 && i > 0 ? (i == @profs.size - 1 ? " y " : ", ") : '' %><a href="<%= Profesor.where(nombre: p).first.sitio %>" target="_blank"><%= p %></a>
 <% end %>
 										</td>
                   </tr>
 <% end %>
-<% end %>
-<% if false %>
-                  <tr>
-                    <td><a href="images/Introduction-to-the-Dictionary-of-Mexican-Spanish.pdf" target="_blank">Introduction to the <em>Dictionary of Mexican Spanish</em></a></td>
-                    <td><a href="http://cell.colmex.mx/index.php/alfonso-medina" target="_blank">Alfonso Medina Urrea</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Thousand_One_Faces_Politics_Language_Mexico.pdf" target="_blank">The Thousand and One Faces of the Politics of Language in Mexico</a></td>
-                    <td><a href="https://cell.colmex.mx/index.php/rebeca-barriga" target="_blank">Rebeca Barriga</a></td>
-                  </tr>
-                  <tr>
-                    <th colspan="2" style="text-align: center">
-                      <h2>Medio Ambiente y Urbanización</h2></th>
-                  </tr>
-                  <tr>
-                    <td><a href="images/The_21st_century_metropolis.pdf" target="_blank">The 21<sup>st</sup> Century Metropolis, Urbanization and Economic Development: Mexico and International Experiences</a></td>
-                    <td><a href="http://cedua.colmex.mx/trejo_alejandra.html" target="_blank">Alejandra Trejo Nieto</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Environmental_policy_in_Mexico.pdf" target="_blank">Environmental Policy in Mexico</a></td>
-                    <td><a href="https://cedua.colmex.mx/ugalde_vicente.html" target="_blank">Vicente Ugalde</a> y <a href="https://cedua.colmex.mx/lopez_carlos.html" target="_blank">Carlos Andrés López Morales</a></td>
-                  </tr>
-                  <tr>
-                    <th colspan="2" style="text-align: center">
-                      <h2>Historia</h2></th>
-                  </tr>
-                  <tr>
-                    <td><a href="images/An_Overview_History_Mexico.pdf" target="_blank">An Overview of Mexican History 1517-2017</a></td>
-                    <td><a href="http://ceh.colmex.mx/index.php/planta-docente" target="_blank">Anne Staples</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Economic_History_of_Mexico_1800-2000.pdf" target="_blank">Economic History of Mexico,1800-2000</a></td>
-                    <td><a href="http://sandrakuntz.colmex.mx/" target="_blank">Sandra Kuntz Ficker</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Public_intellectuals_20th_Century.pdf" target="_blank">Public Intellectuals in the 20<sup>th</sup> Century: Politics, Literature and Ideology</a></td>
-                    <td><a href="https://cei.colmex.mx/Pprofesores/R_Brena.html" target="_blank">Roberto Breña</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Drugs_and_Empires_in_Mexico.pdf" target="_blank">Drugs and Empires in Mexico: A Historical Perspective</a></td>
-                    <td><a href="http://cide.academia.edu/FroylanEnciso" target="_blank">Froylán Enciso</a></td>
-                  </tr>
-                  <tr>
-                    <th colspan="2" style="text-align: center">
-                      <h2>Política</h2></th>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Latin_America_21st_century.pdf" target="_blank">Latin America in the 21<sup>st</sup> Century: From the Left Turn to the Return of the Right</a></td>
-                    <td><a href="http://cei.colmex.mx/Pprofesores/JC_Olmeda.html" target="_blank">Juan Cruz Olmeda</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Understanding_China_LatinAmerica_Relationship.pdf" target="_blank">Understanding the China-Latin America Relationship</a></td>
-                    <td><a href="https://ceaa.colmex.mx/12-planta-docente-y-de-investigacion/41-marisela-connelly" target="_blank">Marisela Connelly</a></td>
-                  </tr>
-                  <tr>
-                    <th colspan="2" style="text-align: center">
-                      <h2>Economy and Society</h2></th>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Social_Choice_Political_Economy.pdf" target="_blank">Social Choice and Political Economy with a Latin American Perspective</a></td>
-                    <td><a href="https://cee.colmex.mx/david-cantala" target="_blank">David Cantalá</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="images/Development_Inequality_Poverty.pdf" target="_blank">Development (D), Inequality (I) and Poverty (P). Towards a transdisciplinary unification of D, I and P concepts and measuring methods</a></td>
-                    <td><a href="https://ces.colmex.mx/123" target="_blank">Julio Boltvinik</a></td>
-                  </tr>
 <% end %>
                 </tbody>
               </table>	
