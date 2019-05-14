@@ -291,6 +291,11 @@ class PanelController < ApplicationController
         p_text: [:tema, :tema_en],
         select: {categoria: CategoriaCurso.all.map{|x| [x.categoria, x.categoria]}},
         check: {profesor: Profesor.all.map{|x| [x.nombre, x.nombre]}}
+      }, "Documentos": {
+        model: Documento,
+        fields: {titulo: "Título"},
+        imgs: {documento: "Documento"},
+        trix: [:documento]
       }
 #      "Personal administrativo": {
 #        model: Personal,

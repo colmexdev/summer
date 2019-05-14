@@ -3,6 +3,7 @@ class PrincipalController < ApplicationController
   def index
     @on_main = true
     @fechas = Fecha.order(fecha_i: :asc, fecha_f: :asc)
+    @folleto = Documento.where('lower(titulo) like ?', '%folleto%').first.documento.url || '#'
   end
 
   def calendario
@@ -10,9 +11,7 @@ class PrincipalController < ApplicationController
   end
 
   def admision
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "admission" : "admision")}
-    end
+    @doc_url = Documento.where('lower(titulo) like ?', '%formato%aplicación%').first.documento.url || '#'
   end
 
   def contacto

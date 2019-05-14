@@ -287,6 +287,7 @@ class PanelController < ApplicationController
       }, "Cursos": {
         model: Tema,
         fields: {tema: "Título (español)", tema_en: "Título (inglés)", categoria: "Categoría", profesor: "Profesor(es)"},
+        imgs: {documento: "Documento"},
         p_text: [:tema, :tema_en],
         select: {categoria: CategoriaCurso.all.map{|x| [x.categoria, x.categoria]}},
         check: {profesor: Profesor.all.map{|x| [x.nombre, x.nombre]}}

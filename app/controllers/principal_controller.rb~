@@ -10,9 +10,7 @@ class PrincipalController < ApplicationController
   end
 
   def admision
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "admission" : "admision")}
-    end
+    @doc_url = Documento.where('lower(titulo) like ?', '%formato%aplicación%').first.documento.url || '#'
   end
 
   def contacto
@@ -20,9 +18,7 @@ class PrincipalController < ApplicationController
   end
 
   def programa
-    respond_to do |format|
-      format.html {render (params[:locale] == "en" ? "program" : "programa")}
-    end
+
   end
 
   def testimonial
