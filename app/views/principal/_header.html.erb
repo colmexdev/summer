@@ -9,10 +9,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse main-nav" id="sept-main-nav">
           <ul class="nav navbar-nav navbar-right">
-            <li class="<%= request.fullpath.include?(main_path) ? 'active' : '' %>"><a href="<%= @on_main ? '#inicio' : main_path %>"><%= t('.inicio') %></a></li>
-            <li class="<%= request.fullpath.include?(programa_path) ? 'active' : '' %>"><a href="<%= @on_main ? '#programa' : programa_path %>"><%= t('.programa') %></a></li>
-            <li class="<%= request.fullpath.include?(sobre_path) ? 'active' : '' %>"><a href="<%= @on_main ? '#colmex' : sobre_path %>"><%= t('.colegio') %></a></li>
-            <li class="<%= request.fullpath.include?(calendario_path) ? 'active' : '' %>"><a href="<%= @on_main ? '#calendario' : calendario_path %>"><%= t('.calendario') %></a></li>
+            <li class="<%= action_name == 'index' ? 'active' : '' %>"><a href="<%= @on_main ? '#inicio' : main_path %>"><%= t('.inicio') %></a></li>
+            <li class="<%= action_name == 'programa' ? 'active' : '' %>"><a href="<%= @on_main ? '#programa' : programa_path %>"><%= t('.programa') %></a></li>
+            <li class="<%= action_name == 'sobre' ? 'active' : '' %>"><a href="<%= @on_main ? '#colmex' : sobre_path %>"><%= t('.colegio') %></a></li>
+            <li class="<%= action_name == 'calendario' ? 'active' : '' %>"><a href="<%= @on_main ? '#calendario' : calendario_path %>"><%= t('.calendario') %></a></li>
             <li class="<%= request.fullpath.include?(admision_path) ? 'active' : '' %>"><a href="<%= admision_path %>"><%= t('.admision' ) %></a></li>
             <li class="<%= request.fullpath.include?(testimonial_path) ? 'active' : '' %>"><a href="<%= testimonial_path %>"><%= t('.testimonial') %></a></li>
             <li class="<%= request.fullpath.include?(contacto_path) ? 'active' : '' %>"><a href="<%= contacto_path %>"><%= t('.contacto') %></a></li>
