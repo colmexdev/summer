@@ -6,11 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programa Internacional de Verano</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
   <!-- Bootstrap -->
-	<link rel="stylesheet" media="all" href="/assets/application-50105e3976c0bb7af364d29445eaf84aa75f809f386c5f31e9e590c291760c42.css">
-	<script src="/assets/application-de7f29f2e82ccb224ea4a710e7f6550dcdaaf18b59e8508e5fd00e5f6f955f40.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+  <link href="css/owl.transitions.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -51,10 +56,10 @@
             <li><a href="#programa">El programa</a></li>
             <li><a href="#colmex">El Colegio</a></li>
             <li><a href="#calendario">Calendario</a></li>
-            <li><a href="/es/admision">Admisión</a></li>
-            <li><a href="/es/testimonial">Testimonial</a></li>
-            <li><a href="/es/contacto">Contacto</a></li>
-            <li><a href="/en/">English</a></li>
+            <li><a href="admision.html">Admisión</a></li>
+            <li><a href="testimonial.html">Testimonial</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="home.html">English</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
