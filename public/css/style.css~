@@ -1679,7 +1679,7 @@ iframe {
 table tr th, table tr td {
     padding: inherit;
     font-size: inherit;
-    color: inherit;
+    /*color: inherit;*/
 }
 
 .lightbox {
