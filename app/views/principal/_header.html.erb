@@ -16,7 +16,7 @@
             <li class="<%= action_name == 'admision' ? 'active' : '' %>"><a href="<%= (I18n.locale == :es ? admision_path : admision_en_path) %>"><%= t('.admision' ) %></a></li>
             <li class="<%= action_name == 'testimonial' ? 'active' : '' %>"><a href="<%= (I18n.locale == :es ? testimonial_path : testimonial_en_path) %>"><%= t('.testimonial') %></a></li>
             <li class="<%= action_name == 'contacto' ? 'active' : '' %>"><a href="<%= (I18n.locale == :es ? contacto_path : contacto_en_path) %>"><%= t('.contacto') %></a></li>
-            <li><a href="<%= url_for(request.params.merge(locale: (params[:locale] == 'es' ? 'en' : 'es'))) %>"><%= t('.idioma') %></a></li>
+            <li><a href="<%= public_send(action_name + (I18n.locale == :es ? '' : '_en') + '_path') %>"><%= t('.idioma') %></a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

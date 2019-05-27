@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :set_locale
   before_filter :set_on_main
+  before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -13,6 +14,20 @@ class ApplicationController < ActionController::Base
 
   def set_on_main
     @on_main = false
+  end
+
+  protected
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(:admin) || panel_path
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    new_admin_session_path
+  end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:usuario, :password, :password_confirmation])
   end
 
 end

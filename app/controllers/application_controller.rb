@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
 
   def set_on_main
     @on_main = false
+    @ruta_es = ['calendario','admision','programa','contacto','sobre','testimonial']
+    @ruta_en = ['calendar','admission','program','contact','overview','testimonials']
   end
 
   protected

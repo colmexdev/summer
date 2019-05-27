@@ -22,13 +22,22 @@ Rails.application.routes.draw do
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
 
-  scope "(:locale)", locale: /(es)|(en)/ do
+  scope "(:locale)", locale: /(es)/ do
     get "calendario" => "principal#calendario", :as => :calendario
     get "admision" => "principal#admision", :as => :admision
     get "contacto" => "principal#contacto", :as => :contacto
     get "programa" => "principal#programa", :as => :programa
     get "testimonial" => "principal#testimonial", :as => :testimonial
     get "sobre" => "principal#sobre", :as => :sobre
+  end
+
+  scope "(:locale)", locale: /(en)/ do
+    get "calendar" => "principal#calendario", :as => :calendario_en
+    get "admission" => "principal#admision", :as => :admision_en
+    get "contact" => "principal#contacto", :as => :contacto_en
+    get "program" => "principal#programa", :as => :programa_en
+    get "testimonials" => "principal#testimonial", :as => :testimonial_en
+    get "overview" => "principal#sobre", :as => :sobre_en
   end
 
   get "/(:locale)", to: "principal#index", as: :main, locale: /(en)|(es)/
