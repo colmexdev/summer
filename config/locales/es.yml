@@ -31,8 +31,8 @@ es:
     - Viernes
     - Sábado
     formats:
-      no_year: '%e de %B'
-      with_year: '%e de %B de %Y'
+      no_year_ord: '%e de %B'
+      with_year_ord: '%e de %B de %Y'
       only_day: '%e'
   principal:
     header:
