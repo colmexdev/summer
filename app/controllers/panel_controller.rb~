@@ -295,7 +295,7 @@ class PanelController < ApplicationController
         model: Documento,
         fields: {titulo: "Título"},
         imgs: {documento: "Documento"},
-        trix: [:documento]
+        trix: [:titulo]
       }
 #      "Personal administrativo": {
 #        model: Personal,

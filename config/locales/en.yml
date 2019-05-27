@@ -1,8 +1,8 @@
 en:
   date:
     formats:
-      no_year: '%B %e'
-      with_year: '%B %e %Y'
+      no_year_ord: '%B %e'
+      with_year_ord: '%B %e %Y'
   principal:
     header:
       inicio: "Home"

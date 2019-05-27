@@ -266,7 +266,7 @@ class PanelController < ApplicationController
 
   def select_set
     @sets = {
-      "Cronograma": {
+      "Calendario": {
         model: Fecha,
         fields: {desc_es: "Descripción (español)", desc_en: "Descripción (inglés)", fecha_i: "Fecha inicial", fecha_f: "Fecha final"},
         dates: [:fecha_i, :fecha_f],
@@ -297,67 +297,6 @@ class PanelController < ApplicationController
         imgs: {documento: "Documento"},
         trix: [:titulo]
       }
-#      "Personal administrativo": {
-#        model: Personal,
-#        fields: {nombre: "Nombre", extension: "Extensión", correo: "Correo electrónico", area: "Área de trabajo", servicio: "Servicios"},
-#        imgs: {},
-#        trix: [],
-#        dates: [],
-#        numbers: [],
-#        p_text: [:nombre, :extension, :correo, :area],
-#        textarea: [:servicio],
-#        select: {area: [["Centro de Estudios Internacionales", "Centro de Estudios Internacionales"]]}
-#      }, "Programas académicos": {
-#        model: Programa,
-#        fields: {titulo: "Título", descripcion_es: "Descripción (español)", descripcion_en: "Descipición (inglés)", fecha_ic: "Fecha inicio de convocatoria", fecha_fc: "Fecha fin de convocatoria"},
-#        imgs: {},
-#        trix: [:descripcion_es, :descripcion_en],
-#        dates: [:fecha_ic, :fecha_fc],
-#        numbers: [],
-#        p_text: [:titulo],
-#        textarea: [],
-#        select: {}
-#      }, "Preguntas frecuentes": {
-#        model: Question,
-#        fields: {pregunta_es: "Pregunta (español)", pregunta_en: "Pregunta (inglés)", respuesta_es: "Respuesta (español)", respuesta_en: "Respuesta (inglés)", tipo: "Tipo", index: "Índice"},
-#        imgs: {},
-#        trix: [:pregunta_es, :pregunta_en, :respuesta_es, :respuesta_en],
-#        dates: [],
-#        numbers: [:index],
-#        p_text: [],
-#        textarea: [],
-#        select: {tipo: [["Licenciatura", "Licenciatura"],["Maestría","Maestría"]]}
-#      }, "Cursos": {
-#        model: Curso,
-#        fields: {titulo: "Título", liga: "Liga externa", imparte: "Impartido por", liga_imparte: "Liga de quien imparte", fecha_ic: "Inicio convocatoria", fecha_fc: "Fin convocatoria", fecha_i: "Fecha de inicio", fecha_f: "Fecha final", descripcion: "Descripción", descripcion_en: "Descripción (inglés)", tipo: "Tipo"},
-#        imgs: {imagen: "Imagen", documento: "Documento"},
-#        trix: [:titulo, :descripcion, :descripcion_en],
-#        dates: [:fecha_ic, :fecha_fc, :fecha_i, :fecha_f],
-#        numbers: [],
-#        p_text: [:liga, :imparte, :liga_imparte],
-#        textarea: [],
-#        select: {tipo: [["Verano","Verano"],["Público","Público"],["MOOC","MOOC"]]}
-#      }, "Galería": {
-#        model: Gallery,
-#        fields: {tags: "Etiquetas"},
-#        imgs: {imagen: "Imagen"},
-#        trix: [],
-#        dates: [],
-#        numbers: [],
-#        p_text: [],
-#        textarea: [:tags],
-#        select: {}
-#      }, "Textos modificables": {
-#        model: Texto,
-#        fields: {texto_es: "Texto (español)", texto_en: "Texto (inglés)", tags: "Etiquetas"},
-#        imgs: {},
-#        trix: [:texto_es, :texto_en],
-#        dates: [],
-#        numbers: [],
-#        p_text: [],
-#        textarea: [:tags],
-#        select: {}
-#      }
     }
   end
 
