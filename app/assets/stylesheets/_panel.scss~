@@ -317,10 +317,16 @@ a.link-panel:hover, a.link-panel:active, a.link-panel:focus{
 #index-panel .row-ind{
 	border-left: 1px solid rgba(0,0,0,0.25);
 	border-right: 1px solid rgba(0,0,0,0.25);
-	height: 225px;
+	height: auto;
+	min-height: 100px;
 }
 
 .head-ind{
+	width: auto;
+	min-width: 150px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 16px;
 	.span-cursor{
 		padding: 0 4px;
 		cursor: pointer;
