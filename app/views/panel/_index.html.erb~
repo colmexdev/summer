@@ -65,25 +65,36 @@
 <% end %>
 
 <script type="text/javascript">
-$(document).ready(function(){
-	var cols = $(".head-ind").length;
-	$(".head-ind").each(function(index){
-		$(this).css({"width": adjustWidths(cols), "text-align": "center", "font-weight": "500","font-size": "16px"}).css('width',('-='+(130/cols)+'px'));
+function callback(){
+	var cols = document.querySelectorAll(".head-ind").length;
+	document.querySelectorAll(".head-ind").forEach(function(element){
+		element.style.textAlign = "center";
+		element.style.fontWeight = "500";
+		element.style.fontSize = "16px";
 	});
-	$(".ind-cell").each(function(index){
-		if(this.innerHTML.length > 100){
-			var n_html = this.innerHTML.substring(0,100) + "..."
+	document.querySelectorAll(".ind-cell").forEach(function(element){
+		if(element.innerHTML.length > 100){
+			var n_html = element.innerHTML.substring(0,100) + "..."
 			this.innerHTML = n_html;
 		}
 	});
 	highlightSort();
 
-	$("#graphs-gest").on("scroll",function(event){
+	document.querySelector("#graphs-gest").addEventListener("scroll",function(event){
 		try{
 			fixPagination(event.currentTarget.scrollLeft, ["#pag-container","#filter-container"]);
 		} catch(err) {}
 	});
-	$("#graphs-gest").trigger("scroll");
-});
+	document.querySelector("#graphs-gest").dispatchEvent(new CustomEvent('scroll'));
+}
+
+if (
+    document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  callback();
+} else {
+  document.addEventListener("DOMContentLoaded", callback);
+}
 </script>
 <% end %>

@@ -67,12 +67,11 @@
 <script type="text/javascript">
 function callback(){
 	var cols = document.querySelectorAll(".head-ind").length;
-	document.querySelectorAll(".head-ind").forEach(function(element){
-		element.style.width = (adjustWidths(cols) - (130/cols)) + "px";
+	/*document.querySelectorAll(".head-ind").forEach(function(element){
 		element.style.textAlign = "center";
 		element.style.fontWeight = "500";
 		element.style.fontSize = "16px";
-	});
+	});*/
 	document.querySelectorAll(".ind-cell").forEach(function(element){
 		if(element.innerHTML.length > 100){
 			var n_html = element.innerHTML.substring(0,100) + "..."
