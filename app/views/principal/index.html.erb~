@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-md-12">
           <h3><%= t('.folleto') %></h3>
-          <a href="images/International-Summer-Program-brochure.pdf" class="btn btn-default-o btn-lg" target="_blank"><%= t('.aqui').upcase %></a> </div>
+          <a href="<%= @folleto %>" class="btn btn-default-o btn-lg" target="_blank"><%= t('.aqui').upcase %></a> </div>
       </div>
     </div>
   </section>
