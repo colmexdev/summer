@@ -39,7 +39,7 @@
           <div class="row mb90">
             <div class="col-md-6">
               <%= t('.desc_curso_html') %>
-              <a href="<%= programa_path %>" class="btn btn-main btn-lg"><%= t('.mas_info') %></a> </div>
+              <a href="<%= (I18n.locale == :es ? programa_path : programa_en_path) %>" class="btn btn-main btn-lg"><%= t('.mas_info') %></a> </div>
             <div class="col-md-6">
               <h3 class="text-center"><img src="images/alumnos.jpg" alt="" class="img-responsive"></h3>
             </div>
@@ -55,7 +55,7 @@
           <div class="c2a">
             <h2><%= t('.colegio') %></h2>
             <p><%= t('.desc_colmex') %></p>
-            <a href="<%= sobre_path %>" class="btn btn-main btn-lg"><%= t('.info') %></a> </div>
+            <a href="<%= (I18n.locale == :es ? sobre_path : sobre_en_path) %>" class="btn btn-main btn-lg"><%= t('.info') %></a> </div>
         </div>
       </div>
     </div>
